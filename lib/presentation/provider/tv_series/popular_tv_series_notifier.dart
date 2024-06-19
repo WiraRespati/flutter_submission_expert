@@ -1,27 +1,27 @@
 import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/domain/entities/movie.dart';
-import 'package:ditonton/domain/usecases/get_top_rated_movies.dart';
+import 'package:ditonton/domain/entities/tv_series.dart';
+import 'package:ditonton/domain/usecases/tv_series/get_popular_tv_series.dart';
 import 'package:flutter/foundation.dart';
 
-class TopRatedMoviesNotifier extends ChangeNotifier {
-  final GetTopRatedMovies getTopRatedMovies;
+class PopularTvSeriesNotifier extends ChangeNotifier {
+  final GetPopularTvSeries getPopularTvSeries;
 
-  TopRatedMoviesNotifier({required this.getTopRatedMovies});
+  PopularTvSeriesNotifier(this.getPopularTvSeries);
 
   RequestState _state = RequestState.Empty;
   RequestState get state => _state;
 
-  List<Movie> _movies = [];
-  List<Movie> get movies => _movies;
+  List<TvSeries> _tvSeries = [];
+  List<TvSeries> get tvSeries => _tvSeries;
 
   String _message = '';
   String get message => _message;
 
-  Future<void> fetchTopRatedMovies() async {
+  Future<void> fetchPopularTvSeries() async {
     _state = RequestState.Loading;
     notifyListeners();
 
-    final result = await getTopRatedMovies.execute();
+    final result = await getPopularTvSeries.execute();
 
     result.fold(
       (failure) {
@@ -29,8 +29,8 @@ class TopRatedMoviesNotifier extends ChangeNotifier {
         _state = RequestState.Error;
         notifyListeners();
       },
-      (moviesData) {
-        _movies = moviesData;
+      (tvSeriesData) {
+        _tvSeries = tvSeriesData;
         _state = RequestState.Loaded;
         notifyListeners();
       },

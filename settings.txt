@@ -1,0 +1,4 @@
+root:  C:\Dev\flutter\dicoding\submission\submission_expert\ditonton 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none
