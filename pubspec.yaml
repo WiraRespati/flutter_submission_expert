@@ -31,17 +31,20 @@ dependencies:
   http: ^1.1.0
   provider: ^6.0.3
   dartz: ^0.10.0-nullsafety.2
-  equatable: ^2.0.2
+  equatable: ^2.0.5
   google_fonts: ^5.1.0
   flutter_rating_bar: ^4.0.0
   cached_network_image: ^3.0.0
   get_it: ^7.1.3
   sqflite: ^2.0.0+3
   path_provider: ^2.0.2
+  flutter_bloc: ^8.1.6
+  rxdart: ^0.27.7
 
 dev_dependencies:
   mockito: ^5.0.8
   build_runner: ^2.0.4
+  bloc_test: ^9.1.7
   flutter_test:
     sdk: flutter
 
