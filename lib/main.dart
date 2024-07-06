@@ -94,49 +94,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => di.locator<SearchTvSeriesBloc>(),
         ),
-
-
-        
-
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<MovieListNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<MovieDetailNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<MovieSearchNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<TopRatedMoviesNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<PopularMoviesNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<WatchlistMovieNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<TvSeriesListNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<TopRatedTvSeriesNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<PopularTvSeriesNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<NowPlayingTvSeriesNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<TvSeriesDetailNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<TvSeriesSearchNotifier>(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (_) => di.locator<WatchlistTvSeriesNotifier>(),
-        // ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

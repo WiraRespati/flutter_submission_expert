@@ -5,6 +5,7 @@ import 'package:ditonton/domain/entities/movie_detail.dart';
 import 'package:ditonton/domain/usecases/movie/get_movie_detail.dart';
 import 'package:equatable/equatable.dart';
 
+
 part 'detail_movie_event.dart';
 part 'detail_movie_state.dart';
 
