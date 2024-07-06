@@ -1,3 +1,4 @@
+import 'package:ditonton/data/models/movie/movie_model.dart';
 import 'package:ditonton/domain/entities/movie.dart';
 import 'package:ditonton/domain/entities/movie_detail.dart';
 import 'package:equatable/equatable.dart';
@@ -42,7 +43,12 @@ class MovieTable extends Equatable {
         posterPath: posterPath,
         title: title,
       );
-
+  factory MovieTable.fromDTO(MovieModel movie) => MovieTable(
+        id: movie.id,
+        title: movie.title,
+        posterPath: movie.posterPath,
+        overview: movie.overview,
+      );
   @override
   // TODO: implement props
   List<Object?> get props => [id, title, posterPath, overview];

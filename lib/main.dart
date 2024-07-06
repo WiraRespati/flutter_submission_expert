@@ -1,4 +1,5 @@
 import 'package:ditonton/common/constants.dart';
+import 'package:ditonton/common/http_ssl_pinning.dart';
 import 'package:ditonton/common/utils.dart';
 import 'package:ditonton/presentation/bloc/movie/detail_movie_bloc/detail_movie_bloc.dart';
 import 'package:ditonton/presentation/bloc/movie/now_playing_movie_bloc/now_playing_movie_bloc.dart';
@@ -35,7 +36,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ditonton/injection.dart' as di;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HttpSSLPinning.init();
   di.init();
   runApp(MyApp());
 }
@@ -69,7 +72,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => di.locator<SearchMovieBloc>(),
         ),
-
         BlocProvider(
           create: (_) => di.locator<NowPlayingTvSeriesBloc>(),
         ),
@@ -79,7 +81,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => di.locator<PopularTvSeriesBloc>(),
         ),
-         BlocProvider(
+        BlocProvider(
           create: (_) => di.locator<DetailTvSeriesBloc>(),
         ),
         BlocProvider(
