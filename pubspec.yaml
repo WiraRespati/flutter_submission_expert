@@ -43,7 +43,14 @@ dependencies:
   internet_connection_checker: ^1.0.0+1
   firebase_core: ^3.1.1
   firebase_crashlytics: ^4.0.2
-  
+  about:
+    path: about
+  core:
+    path: core
+  movie:
+    path: movie
+  tv_series:
+    path: tv_series
 
 dev_dependencies:
   mockito: ^5.0.8
