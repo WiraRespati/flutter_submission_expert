@@ -41,6 +41,8 @@ dependencies:
   flutter_bloc: ^8.1.6
   rxdart: ^0.27.7
   internet_connection_checker: ^1.0.0+1
+  firebase_core: ^3.1.1
+  firebase_crashlytics: ^4.0.2
   
 
 dev_dependencies:
